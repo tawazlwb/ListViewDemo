@@ -27,7 +27,8 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.first_layout);
 
         listView = (ListView) findViewById(R.id.list_view);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1, android_versions);
+        //adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1, android_versions);
+        adapter = new ArrayAdapter<String>(this,R.layout.list_view_custom_layout, R.id.list_item, android_versions);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
